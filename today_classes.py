@@ -27,8 +27,8 @@ subjects = {'monday' : ['UNIX', 'OOAD', 'CD', 'OS', 'DBMS'],
               }
 
 # GOOGLE MEET LINKS TO RESPECTIVE SUBJECTS
-classes = { 'UNIX':	'https://meet.google.com/lookup/e3667sh3xh',
-                'CD':'link_to_sub',
+classes = { 'UNIX':	'meet.google.com/dcn-mvek-mzm',
+                'CD':'http://meet.google.com/btk-yrqu-xcb',
                 'PEHV':'link_to_sub',
                 'OS':'link_to_sub',
                 'OOAD':'link_to_sub',
@@ -49,9 +49,9 @@ def find_classes():
     day = find_day()
     classes = subjects[day]
     # CHANGE ACCORDING TO YOUR TIME TABLE, I DONT HAVE CLASSES ON Tues, Thurs, Sat. SO MY CODE 
-    if day != 'tuesday' and day != 'thursday'  and day != 'saturday'  and day != 'sunday' :
+    if day != 'wednesday' and day != 'thursday'  and day != 'saturday'  and day != 'sunday' :
         # CHANGE ACCORDING TO YOUR CLASS TIMINGS
-        timings = ['09:15 am - 10:00 am','10:05 am - 10:50 am', '12:59 pm - 12:40 pm', '12:45 am - 12:30 pm', '12:35 pm - 01:20 pm']
+        timings = ['10:50 am - 11:30 am','11:40 am - 12:23 am', '12:30 pm - 12:59 pm', '01:10 am - 01:40 pm', '12:35 pm - 01:20 pm']
         for i in range(len(timings)):
             formatted = '{} {}'.format(timings[i],classes[i])
             subs.append(formatted)
@@ -78,14 +78,14 @@ def open_link(url):
         #Logs in the classroom
         username=driver.find_element_by_id('identifierId')
         username.click()
-        username.send_keys('enter_your_email_here')
+        username.send_keys('testingminiproj2025@gmail.com')
 
         next=driver.find_element_by_xpath('//*[@id="identifierNext"]/div/button/div[2]')
         next.click()
         time.sleep(2)
         password=driver.find_element_by_xpath('//*[@id="password"]/div[1]/div/div[1]/input')
         password.click()
-        password.send_keys('enter_your_password_here')
+        password.send_keys('123_456@')
         next=driver.find_element_by_xpath('//*[@id="passwordNext"]/div/button/div[2]')
         next.click()
         time.sleep(15)
